@@ -6,3 +6,20 @@
 <a href="#!contact">Go to contatct</a>||
 
 <a href="javascript:void(0);" ng-click="go_back()">Go Back</a>
+
+<hr /><hr />
+
+<div class="card" style="width: 100%;">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" ng-repeat="course in result" style="margin: 5px;border: 2px solid #2196f3">
+            {{course.courseCode}} - {{course.courseName}} [{{course.courseSection}}]<br />
+            <strong>Status:</strong>{{course.status}} <br />
+            <strong>Result:</strong>{{course.result}} ({{course.marks}})
+            <div>
+                <button type="button" class="btn btn-primary">TSF</button>
+                <button type="button" class="btn btn-warning">Notes</button>
+                <button type="button" class="btn btn-success">Notice</button>
+            </div>
+        </li>
+    </ul>
+</div>
